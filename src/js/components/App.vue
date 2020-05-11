@@ -1,49 +1,48 @@
 <template>
   <div class="vue-sample">
-	<vk-button class="uk-margin-small-right" @click="show = true">Open</vk-button>
+    <vk-button class="uk-margin-small-right" @click="show = true">Open</vk-button>
 
-	<vk-modal :show.sync="show">
-	  <vk-modal-title>Headline</vk-modal-title>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	  <p class="uk-text-right">
-	    <vk-button @click="show = false" class="uk-margin-small-right">Cancel</vk-button>
-	    <vk-button type="primary">Save</vk-button>
-	  </p>
-	</vk-modal>
+    <vk-modal :show.sync="show">
+      <vk-modal-title>Headline</vk-modal-title>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="uk-text-right">
+        <vk-button @click="show = false" class="uk-margin-small-right">Cancel</vk-button>
+        <vk-button type="primary">Save</vk-button>
+      </p>
+    </vk-modal>
   </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        show: false
-      }
-    },
-    props:[
-      //
-    ],
-    methods: {
-      uncancel_customer(){
-        axios.post('/', params)
-        .then((response)=>{
+export default {
+  data() {
+    return {
+      show: false
+    };
+  },
+  props: [
+    //
+  ],
+  methods: {
+    uncancel_customer() {
+      axios
+        .post("/", params)
+        .then(response => {
           if (response.data == 1) {
-           //
-          }else{
-           //
+            //
+          } else {
+            //
           }
         })
-        .catch((error)=>{
+        .catch(error => {
           //
         })
         .then(() => {
           //
         });
-      }
     }
   }
+};
 </script>
 <style>
-  * {
-    border: 1px solid red;
-  }
+/*  */
 </style>
